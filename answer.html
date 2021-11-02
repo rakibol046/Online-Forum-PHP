@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Family  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Work+Sans:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title -->
+    <title>Just-In-Time Solution</title>
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+    <!-- Header Navigation-->
+    <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+    <header>
+      <nav class="navigation">
+        <div class="navigation__logo">
+          <a href="#" class="navigation__logo--link">JIT Solution</a>
+        </div>
+        <form class="navigation__search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+          <input
+            type="search"
+            name="search"
+            class="navigation__search--input"
+            placeholder="Search.."
+          />
+          <button class="btn btn--different">Ask Question</button>
+          <button class="btn btn--different sign-in">Sign In</button>
+        </form>
+        <div class="navigation__profile" data-tab="1">
+          <div class="navigation__profile-user">
+            <img
+              src="img/user-photo-1.jpg"
+              alt="user-photo"
+              class="navigation__profile-img"
+            />
+            <p class="navigation__profile-name">Steve</p>
+          </div>
+          <div class="navigation__profile-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <!-- Side Navigation-->
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <aside>
+        <nav class="side-nav">
+          <ul class="side-nav__lists">
+            <li
+              class="side-nav__list side-nav__list--active side-nav__list-1"
+              data-tab="1"
+            >
+              <a href="index.html" class="side-nav__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="side-nav__list side-nav__list-2" data-tab="2">
+              <a href="#" class="side-nav__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Questions</span></a
+              >
+            </li>
+            <li class="side-nav__list side-nav__list-3" data-tab="3">
+              <a href="#" class="side-nav__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                  />
+                </svg>
+                <span>Tag</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <!-- Main 01 home (Top Questions)-->
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+
+      <main class="main-content main-content__active main-content--1">
+        <!-- question 01 -->
+        <div class="question">
+          <div class="question__name">
+            <a href="#">How does Prototypal inheritance works in JavaScript?</a>
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+        <div class="answer">
+          <div class="question__answer-count answer__count">4 answers</div>
+          <p class="answer__details">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error,
+            optio? Aliquid, voluptatibus? Saepe blanditiis quo, aspernatur
+            eveniet ratione nemo consectetur. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Tempore, dolorem. Lorem ipsum, dolor
+            sit amet consectetur adipisicing elit. Voluptate porro delectus
+            vitae magnam praesentium, tenetur quaerat modi sit ratione
+            obcaecati.
+          </p>
+          <div class="answer__person">
+            <p>Answerd by</p>
+            <a href="#">peter David</a>
+            <p>October 24, 2021</p>
+          </div>
+          <form action="#" class="answer__form">
+            <label for="comment">Your Answer:</label>
+            <textarea name="" id="comment" cols="30" rows="10"></textarea>
+          </form>
+        </div>
+      </main>
+
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <!-- Main 02 (All questions)-->
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <main class="main-content main-content--2">
+        <div class="main-header">
+          <span>2,21,000 Questions</span>
+          <h1 class="heading-primary">All Questions</h1>
+        </div>
+        <!-- question 01 -->
+        <div class="question">
+          <div class="question__answer-count">0 answers</div>
+          <div class="question__name">
+            <a href="answer.html"
+              >How does Prototypal inheritance works in JavaScript?</a
+            >
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+        <!-- question 02 -->
+        <div class="question">
+          <div class="question__answer-count">0 answers</div>
+          <div class="question__name">
+            <a href="answer.html"
+              >How does Prototypal inheritance works in JavaScript?</a
+            >
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+        <!-- question 03 -->
+        <div class="question">
+          <div class="question__answer-count">0 answers</div>
+          <div class="question__name">
+            <a href="answer.html"
+              >How does Prototypal inheritance works in JavaScript?</a
+            >
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+        <!-- question 04 -->
+        <div class="question">
+          <div class="question__answer-count">0 answers</div>
+          <div class="question__name">
+            <a href="answer.html"
+              >How does Prototypal inheritance works in JavaScript?</a
+            >
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+        <!-- question 05 -->
+        <div class="question">
+          <div class="question__answer-count">0 answers</div>
+          <div class="question__name">
+            <a href="answer.html"
+              >How does Prototypal inheritance works in JavaScript?</a
+            >
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+        <!-- question 06 -->
+        <div class="question">
+          <div class="question__answer-count">0 answers</div>
+          <div class="question__name">
+            <a href="answer.html"
+              >How does Prototypal inheritance works in JavaScript?</a
+            >
+          </div>
+          <div class="question__user">Steven Jones</div>
+          <div class="question__time">31/01/2021</div>
+        </div>
+      </main>
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <!-- Main 03 (Tags)-->
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*---->
+      <main class="main-content main-content--3">
+        <h2 class="heading-secondary">Tags</h2>
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
+          consequuntur quod ipsa, beatae iusto repellat numquam voluptatum
+          libero obcaecati similique.
+        </p>
+        <!-- Categories -->
+        <div class="main-header">
+          <div class="search-box">
+            <p class="search-box-name">Show All Tag Synonyms</p>
+            <div class="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+              <input
+                type="search"
+                name="search"
+                class="search__input"
+                placeholder="Filter by tag name.."
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Cards Compnents -->
+        <div class="cards">
+          <!-- card 01-->
+          <div class="card">
+            <h3 class="card__title">JavaScript</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 02-->
+          <div class="card">
+            <h3 class="card__title">Python</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 03-->
+          <div class="card">
+            <h3 class="card__title">Java</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 04-->
+          <div class="card">
+            <h3 class="card__title">Golang</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 05-->
+          <div class="card">
+            <h3 class="card__title">React JS</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 06-->
+          <div class="card">
+            <h3 class="card__title">C/C++</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 07-->
+          <div class="card">
+            <h3 class="card__title">PHP</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- card 08-->
+          <div class="card">
+            <h3 class="card__title">CSS</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+          <!-- Card 09 -->
+          <div class="card">
+            <h3 class="card__title">Node JS</h3>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet, consectetur beatae adipisicing.
+              Sapiente consequuntur quod ipsa, beatae iusto repellat numquam
+              voluptatum libero obcaecati similique.
+            </p>
+            <p class="card__question-counts">110 Questions</p>
+          </div>
+        </div>
+      </main>
+      <!-- User Profile -->
+      <main class="main-content main-content--4">
+        <figure class="user">
+          <img src="img/user-photo-1.jpg" alt="" class="user__img" />
+          <figcaption class="user__info">
+            <p class="user__name">Steven Adam</p>
+            <p class="user__join">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span> Member For 1 Years </span>
+            </p>
+            <p class="user__location">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Canada</span>
+            </p>
+          </figcaption>
+        </figure>
+        <!-- profile-->
+        <div class="options">
+          <div class="options__tab-container">
+            <button
+              class="options__tab options__tab--1 options__tab--active"
+              data-tab="1"
+            >
+              Profile Activity
+            </button>
+            <button class="options__tab options__tab--2" data-tab="2">
+              Setting
+            </button>
+          </div>
+          <!-- activity-->
+          <div
+            class="
+              options__activity
+              options__content
+              options__content--1
+              options__content--active
+            "
+          >
+            <p class="options__answer">
+              <a href="#" class="options__answer--1"> Answer (0) </a>
+              <span class="options__answer--2"
+                >You have not answered any question yet.</span
+              >
+            </p>
+            <p class="options__question">
+              <a href="#" class="options__question--1"> Question (0) </a>
+              <span class="options__question--2"
+                >You have not asked any question Yet</span
+              >
+            </p>
+          </div>
+          <!-- settings-->
+          <div class="options__settings options__content options__content--2">
+            <figure class="options__photo">
+              <img src="img/user-photo-1.jpg" alt="" class="options__img" />
+              <figcaption class="options__img--new">
+                Change Profile Picture
+              </figcaption>
+            </figure>
+            <form action="" class="form">
+              <label for="name">Display Name</label>
+              <input type="text" id="name" class="form__display" />
+              <label for="password">New Password</label>
+              <input type="password" id="password" class="form__display" />
+              <input type="button" value="Save Profile" />
+              <input type="reset" value="Cancel" />
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!--+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-
+    <!-- Booking/Login Page Section -->
+    <!--+-+-+-+-+-+-+-++-+-+-+-+-+-+-+--->
+    <section class="section-book">
+      <button class="btn--close-signin">&times;</button>
+      <div class="row">
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <!-- Heading secondary for All section title -->
+              <div class="u-margin-bottom-large">
+                <h2 class="heading-tertiary">Register Now</h2>
+              </div>
+              <div class="form__group">
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullname"
+                  class="form__input"
+                  placeholder="Full Name"
+                />
+                <label for="fullname" class="form__label">Full Name</label>
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form__input"
+                  placeholder="Email Address"
+                />
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  name="email"
+                  id="pass"
+                  class="form__input"
+                  placeholder="password"
+                />
+                <label for="pass" class="form__label">Password</label>
+              </div>
+
+              <div class="form__group">
+                <div class="form__radio-group">
+                  <input
+                    type="radio"
+                    name="quantity"
+                    id="manage"
+                    class="form__radio-input"
+                  />
+                  <label for="manage" class="form__radio-label">
+                    <span class="form__radio-button">&nbsp;</span>
+                    Student
+                  </label>
+                </div>
+                <div class="form__radio-group">
+                  <input
+                    type="radio"
+                    name="quantity"
+                    id="manage2"
+                    class="form__radio-input"
+                  />
+                  <label for="manage2" class="form__radio-label">
+                    <span class="form__radio-button">&nbsp;</span>
+                    Teacher
+                  </label>
+                </div>
+              </div>
+              <a href="#" class="btn-tertiary">Sign In</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- 
+        <!-- Modal Window for Asked Questions  -->
+    <!--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--->
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">Ask a Questions</h2>
+      <form action="#" class="modal__form">
+        <label for="first-name" class="modal__form-label">Title</label>
+        <input type="text" class="modal__form-input" id="first-name" />
+        <label for="last-name" class="modal__form-label">Question</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <label for="tag" class="modal__form-label">Categories</label>
+        <select name="" id="tag">
+          <option value="golang">Golang</option>
+          <option value="C/C++">C/C++</option>
+          <option value="Javascript">JavaScript</option>
+          <option value="Node Js">Node JS</option>
+          <option value="Python">python</option>
+          <option value="React JS">React JS</option>
+          <option value="Java">Java</option>
+          <option value="php">PHP</option>
+          <option value="css">CSS</option>
+        </select>
+        <button>Submit &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
