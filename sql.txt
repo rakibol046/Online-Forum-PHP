@@ -1,0 +1,33 @@
+CREATE TABLE userinfo(
+    user_id int NOT NULL AUTO_INCREMENT,
+    user_name varchar(30),
+    email varchar(30),
+address text,
+profession varchar(20),
+    password varchar(30),
+    PRIMARY KEY(user_id)
+    
+);
+
+CREATE TABLE question(
+    question_id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    question_title text,
+    question_desc text,
+    question_categories text,
+    date varchar(200),
+    PRIMARY KEY (question_id),
+    FOREIGN KEY (user_id) REFERENCES userinfo(user_id)
+);
+
+
+CREATE TABLE answer(
+	answer_id int NOT NULL AUTO_INCREMENT,
+     	user_id int NOT NULL,
+	question_id int NOT NULL,
+	question_answer text,
+	date varchar(200),
+	PRIMARY KEY (answer_id),
+    	FOREIGN KEY (user_id) REFERENCES userinfo(user_id),
+   	FOREIGN KEY (question_id) REFERENCES question(question_id)
+);

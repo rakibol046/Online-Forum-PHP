@@ -2,7 +2,7 @@
         <figure class="user">
           <img src="img/user-photo-1.jpg" alt="" class="user__img" />
           <figcaption class="user__info">
-            <p class="user__name">Steven Adam</p>
+            <p class="user__name"><?php echo $userName?></p>
             <p class="user__join">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <span> Member For 1 Years </span>
+              <span> <?php echo $profession?> </span>
             </p>
             <p class="user__location">
               <svg
@@ -31,7 +31,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <span>Canada</span>
+              <span><?php echo $address?></span>
             </p>
           </figcaption>
         </figure>
@@ -78,15 +78,14 @@
                 Change Profile Picture
               </figcaption>
             </figure>
-            <form action="" class="form">
+            <form action="profile-update.php" class="form" method="POST">
               <label for="name">Display Name</label>
-              <input type="text" id="name" class="form__display" />
+              <input type="text" id="name" class="form__display" value="<?php echo $userName?>"/>
               <label for="password">New Password</label>
               <input type="password" id="password" class="form__display" />
-              <input type="button" value="Save Profile" />
+              <input type="submit" class="profile-submit-btn" value="Save Profile" />
               <input type="reset" value="Cancel" />
             </form>
           </div>
         </div>
       </main>
-    </div>

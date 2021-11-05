@@ -44,16 +44,16 @@ userTabContainer.addEventListener('click', function (e) {
 
 ///////////////////////////////////////////
 // when User Clicks his/her profile
-const profile = document.querySelector('.navigation__profile-user');
+// const profile = document.querySelector('.navigation__profile-user');
 
-profile.addEventListener('click', function () {
-  tabContent.forEach(content =>
-    content.classList.remove('main-content__active')
-  );
-  document
-    .querySelector('.main-content--4')
-    .classList.add('main-content__active');
-});
+// profile.addEventListener('click', function () {
+//   tabContent.forEach(content =>
+//     content.classList.remove('main-content__active')
+//   );
+//   document
+//     .querySelector('.main-content--4')
+//     .classList.add('main-content__active');
+// });
 
 ////////////////////////////////////////
 // modal window for asked questions
@@ -80,7 +80,7 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-// for testing login form
+// for testing registration form
 const signIn = document.querySelector('.section-book');
 const btnSign = document.querySelector('.sign-in');
 const btnCloseSignin = document.querySelector('.btn--close-signin');
@@ -93,3 +93,18 @@ btnSign.addEventListener('click', function (e) {
   document.querySelector('.section-book').classList.add('sign-in-form');
 });
 btnCloseSignin.addEventListener('click', closeSignin);
+
+
+// for testing login form
+const LogIn = document.querySelector('.section-book-log');
+const btnLog = document.querySelector('.log-in');
+const btnCloseLogin = document.querySelector('.btn--close-login');
+
+const closeLogin = function () {
+  LogIn.classList.remove('log-in-form');
+};
+btnLog.addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('.section-book-log').classList.add('log-in-form');
+});
+btnCloseLogin.addEventListener('click', closeLogin);
