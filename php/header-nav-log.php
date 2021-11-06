@@ -32,6 +32,7 @@
               src="img/user-photo-1.jpg"
               alt="user-photo"
               class="navigation__profile-img"
+              style="border:2px solid red"
             />
             <p class="navigation__profile-name"><?php echo $userName?></p>
           </div>

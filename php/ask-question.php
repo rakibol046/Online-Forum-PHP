@@ -9,7 +9,7 @@
         <label for="tag" class="modal__form-label">Categories</label>
         <select name="category" id="tag">
           <option value="General">General</option>
-          <option value="C/C++">C/C++</option>
+          <option value="C">C/C++</option>
           <option value="Javascript">JavaScript</option>
           <option value="Node Js">Node JS</option>
           <option value="Python">python</option>
@@ -17,6 +17,7 @@
           <option value="Java">Java</option>
           <option value="php">PHP</option>
           <option value="css">CSS</option>
+          <option value="css">Go</option>
         </select>
         <button type="submit" name="askSubmitBtn">Submit &rarr;</button>
       </form>

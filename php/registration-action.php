@@ -1,8 +1,6 @@
 <?php
 // error_reporting(0);
-    require "db.php";
-    echo "regi action";
-    
+    require "db.php";    
         $username = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];

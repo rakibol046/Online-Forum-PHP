@@ -4,9 +4,9 @@ require 'php/db.php';
 session_start();
 
 $userId=$_SESSION["userid"];
-$questionId = $_GET["id"];
+$tag = $_GET["tag"];
 
-  $result = mysqli_query($db, "SELECT * FROM question WHERE question_id ='$questionId'");
+  $result = mysqli_query($db, "SELECT * FROM question WHERE question_categories ='$tag'");
   if($result==true){
   while($row = mysqli_fetch_assoc($result)){
   $title = $row['question_title'];
@@ -44,7 +44,13 @@ $questionId = $_GET["id"];
             width: 70%;
             margin: 90px auto;
             border: 1px solid white;
-            background-color: white;
+            /* background-color: white; */
+        
+        }
+        .questionArea h1{
+        color: #730039;
+    font-size: 40px;
+    padding: 19px;
         
         }
         .submit-btn{
@@ -105,75 +111,51 @@ $questionId = $_GET["id"];
       <main class="main-content main-content__active main-content--1">
         <!-- question 01 -->
         <div class="questionArea">
-        <div class="question">
-          <div class="question__name">
-            <a href="#"> <?php echo $title?></a>
-          </div>
-          <!-- <div class="question__user">Steven Jones</div> -->
-          <div class="question__time"><?php echo $date?></div>
-        </div>
-        <div class="answer">
+
+        <h1> All <?php echo $tag?> Question</h1>
+        <br>
         
-        <div class="question-discription">
-            <h1>Problem Description</h1>
-            <?php echo $desc?>
-        </div>
 
-        <?php 
+    <?php 
+    // $result = mysqli_query($db, 'SELECT * FROM question ORDER BY RAND() LIMIT 100');
+    $result = mysqli_query($db, "SELECT userinfo.user_name, question.question_id, question.question_title, question.date
+    FROM question
+    INNER JOIN userinfo
+    ON userinfo.user_id = question.user_id
+    WHERE question.question_categories = '$tag'
+    ORDER BY question.question_id");
+    
 
-        // $result = mysqli_query($db, "SELECT userinfo.user_name, question.question_id, question.question_title, question.date
-        // FROM question
-        // INNER JOIN userinfo
-        // ON userinfo.user_id = question.user_id
-        // WHERE question_id ='$questionId';");
-
-          // $ansResult = mysqli_query($db, "SELECT * FROM answer WHERE question_id ='$questionId'");
-          $ansResult =mysqli_query($db, "SELECT userinfo.user_name, answer.date, answer.question_answer
-          FROM answer
-          INNER JOIN userinfo
-          ON userinfo.user_id = answer.user_id
-          WHERE question_id ='$questionId'
-          ORDER BY answer.answer_id;");
-          $i=0;
-          while($ansRow = mysqli_fetch_assoc($ansResult)){
-              $i++;
-            echo "
-            <div class='answer-area'>
-            <div class='question__answer-count answer__count'>{$i} answers</div>
-              <p class='answer__details'>
-               {$ansRow["question_answer"]}
-              </p>
-              <div class='answer__person'>
-                <p>Answerd by</p>
-                <a href='#'>{$ansRow["user_name"]}</a>
-                <p>{$ansRow["date"]}</p>
-              </div>
-            </div>
-            ";
-
-          }
-          
-        
+  
+    while($row = mysqli_fetch_assoc($result)){
+      $qid= $row["question_id"];
+      $numberOfAnswered = mysqli_num_rows(mysqli_query($db, "SELECT * FROM answer WHERE question_id='$qid'"));
+ echo " 
+ <div class='question'>
+ <div class='question__answer-count'>{$numberOfAnswered} answers</div>
+ <div class='question__name'>
+ <a href='answer.php?id={$row["question_id"]}'>{$row['question_title']}</a>
+ </div>
+ <div class='question__user'>{$row["user_name"]}</div>
+ <div class='question__time'>{$row["date"]}</div>
+ </div>
+      
+ ";
+ }
     
 
 ?>
+        
 
 
 
 
-  <?php
- 
-  if($userId !=null){
-    require 'php/answer-form.php';
-  }
-  
-  ?>
           
         </div>
     </div>
       </main>
      
-    <div class="overlay hidden"></div>
-    <script src="js/script.js"></script>
+    <!-- <div class="overlay hidden"></div>
+    <script src="js/script.js"></script> -->
   </body>
 </html>

@@ -19,6 +19,17 @@ if($numberOfRows>=1){
 }
 
 $numberOfQuestion = mysqli_num_rows(mysqli_query($db, 'SELECT * FROM question'));
+$numberOfUserAnswered = mysqli_num_rows(mysqli_query($db, "SELECT * FROM answer WHERE user_id='$userId'"));
+$numberOfUserQuestion = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE user_id='$userId'"));
+$java = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='java'"));
+$go = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='go'"));
+$javaScript = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='javascript'"));
+$python = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='python'"));
+$c = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='c'"));
+$php = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='php'"));
+$reactJs = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='react js'"));
+$nodeJs = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='node js'"));
+$css = mysqli_num_rows(mysqli_query($db, "SELECT * FROM question WHERE question_categories='css'"));
 
 
 ?>
@@ -143,20 +154,20 @@ $numberOfQuestion = mysqli_num_rows(mysqli_query($db, 'SELECT * FROM question'))
     homeData();
     
 
-          // $("#forget-btn").click(function(e) {
-          //   e.preventDefault();
-          //   var forgetEmail = $("#femail").val();
-          //     $.ajax({
-          //     url: "forget-password.php",
-          //     type : "POST",
-          //     data : {femail:forgetEmail},
-          //     success : function(data){
-          //       if(data == 1){
-          //         $("#mymodel").show();
-          //       }
-          //     }
-          //   });
-          // });
+        //   $("#forget-btn").click(function(e) {
+        //     e.preventDefault();
+        //     var forgetEmail = $("#femail").val();
+        //       $.ajax({
+        //       url: "forget-password.php",
+        //       type : "POST",
+        //       data : {femail:forgetEmail},
+        //       success : function(data){
+        //         if(data == 1){
+        //           $("#mymodel").show();
+        //         }
+        //       }
+        //     });
+        //   });
         });
       </script>
 

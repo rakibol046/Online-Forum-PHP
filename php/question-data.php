@@ -11,9 +11,11 @@ require 'db.php';
 
   
     while($row = mysqli_fetch_assoc($result)){
+        $qid= $row["question_id"];
+        $numberOfAnswered = mysqli_num_rows(mysqli_query($db, "SELECT * FROM answer WHERE question_id='$qid'"));
    echo " 
    <div class='question'>
-   <div class='question__answer-count'>0 answers</div>
+   <div class='question__answer-count'>{$numberOfAnswered} answers</div>
    <div class='question__name'>
    <a href='answer.php?id={$row["question_id"]}'>{$row['question_title']}</a>
    </div>

@@ -1,6 +1,6 @@
 <main class="main-content main-content--4">
         <figure class="user">
-          <img src="img/user-photo-1.jpg" alt="" class="user__img" />
+          <img src="img/user-photo-1.jpg" alt="" class="user__img" style="border:2px solid white" />
           <figcaption class="user__info">
             <p class="user__name"><?php echo $userName?></p>
             <p class="user__join">
@@ -58,15 +58,15 @@
             "
           >
             <p class="options__answer">
-              <a href="#" class="options__answer--1"> Answer (0) </a>
+              <a href="#" class="options__answer--1"> Answer (<?php echo $numberOfUserAnswered?>) </a>
               <span class="options__answer--2"
-                >You have not answered any question yet.</span
+                >You have answered <?php echo $numberOfUserAnswered?> question.</span
               >
             </p>
             <p class="options__question">
-              <a href="#" class="options__question--1"> Question (0) </a>
+              <a href="#" class="options__question--1"> Question (<?php echo $numberOfUserQuestion?>) </a>
               <span class="options__question--2"
-                >You have not asked any question Yet</span
+                >You have asked <?php echo $numberOfUserQuestion?> question</span
               >
             </p>
           </div>
@@ -78,11 +78,11 @@
                 Change Profile Picture
               </figcaption>
             </figure>
-            <form action="profile-update.php" class="form" method="POST">
+            <form action="php/profile-update.php" class="form" method="POST">
               <label for="name">Display Name</label>
-              <input type="text" id="name" class="form__display" value="<?php echo $userName?>"/>
+              <input type="text" id="name" class="form__display" name="name" value="<?php echo $userName?>"/>
               <label for="password">New Password</label>
-              <input type="password" id="password" class="form__display" />
+              <input type="password" id="password" class="form__display" name="password" />
               <input type="submit" class="profile-submit-btn" value="Save Profile" />
               <input type="reset" value="Cancel" />
             </form>
