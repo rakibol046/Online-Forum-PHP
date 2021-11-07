@@ -1,3 +1,5 @@
+CREATE DATABASE online_forum;
+
 CREATE TABLE userinfo(
     user_id int NOT NULL AUTO_INCREMENT,
     user_name varchar(30),
